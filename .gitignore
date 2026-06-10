@@ -1,6 +1,7 @@
 swc.zip
 *.zip
+Make.nb
+readme.docx
 .DS_Store
 __pycache__/
 *.pyc
-

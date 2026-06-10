@@ -12,9 +12,8 @@ from pathlib import Path
 from zipfile import ZipFile
 
 
-ROOT = Path(__file__).resolve().parents[2]
-SITE = ROOT / "site"
-PUBLIC = SITE / "public"
+ROOT = Path(__file__).resolve().parents[1]
+PUBLIC = ROOT / "public"
 DATA_DIR = PUBLIC / "data"
 THUMB_DIR = PUBLIC / "assets" / "thumbnails"
 README = ROOT / "readme.docx"
