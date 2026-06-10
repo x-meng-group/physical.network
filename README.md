@@ -1,37 +1,17 @@
 # Physical Network Dataset Website
 
-This is a dependency-free static website for `physical.network`.
+This repository hosts the dependency-free static website for `physical.network`.
 
-## Update workflow
+Physical networks are spatially embedded systems whose nodes and links are made from
+material resources. Examples include neurons, vascular systems, plant and fungal
+branches, corals, rivers, power grids, and engineered circuits. Unlike abstract
+networks, their geometry matters: links have length, thickness, surface area, and
+three-dimensional constraints that shape how the network can branch, connect, and
+function. The dataset supports systematic comparisons of these physical structures
+across biological, infrastructural, geospatial, and engineered systems.
 
-1. Replace the local, untracked `swc.zip` when the SWC archive changes.
-2. Update the local, untracked `readme.docx` when dataset descriptions, thumbnails, or source links change.
-3. Run:
-
-   ```bash
-   python3 scripts/generate_site_data.py
-   ```
-
-4. Review:
-
-   - `public/data/datasets.json`
-   - `public/data/manifest.json`
-   - `public/assets/thumbnails/`
-
-5. Serve locally from the repository root:
-
-   ```bash
-   python3 -m http.server 8000
-   ```
-
-6. Open `http://localhost:8000/`.
-
-## Data model
-
-The website is generated from `public/data/datasets.json`. Dataset cards, filters,
-summary statistics, and detail panels are not hardcoded in the HTML. Future
-collections should be added to the local `readme.docx` and then regenerated, or added
-directly to the JSON if the DOCX is no longer the source of truth.
-
-The current release metadata includes an empty DOI/version field. Fill those in
-after the Zenodo record is finalized.
+The webpage presents a searchable catalog of physical-network datasets. It shows
+summary statistics, thumbnails, available representations, original data types,
+archive folders, representative SWC files, links to original sources, and the
+current Zenodo data record. The site content is generated from local metadata and
+the SWC archive manifest so the browser view stays aligned with the packaged data.
