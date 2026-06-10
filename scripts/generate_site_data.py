@@ -23,6 +23,7 @@ NS = {
     "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
     "a": "http://schemas.openxmlformats.org/drawingml/2006/main",
     "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+    "rel": "http://schemas.openxmlformats.org/package/2006/relationships",
 }
 
 FOLDER_ALIASES = {
@@ -75,6 +76,31 @@ def read_docx_tables() -> list[list[list[str]]]:
             rows.append([cell_text(tc) for tc in tr.findall("w:tc", NS)])
         tables.append(rows)
     return tables
+
+
+def read_docx_source_urls() -> list[str]:
+    with ZipFile(README) as zf:
+        root = ET.fromstring(zf.read("word/document.xml"))
+        rel_root = ET.fromstring(zf.read("word/_rels/document.xml.rels"))
+
+    relationships = {
+        rel.attrib["Id"]: rel.attrib.get("Target", "")
+        for rel in rel_root.findall("rel:Relationship", NS)
+    }
+    tables = root.findall(".//w:tbl", NS)
+    if len(tables) < 2:
+        return []
+
+    urls: list[str] = []
+    for tr in tables[1].findall("w:tr", NS)[1:]:
+        cells = tr.findall("w:tc", NS)
+        if len(cells) < 3:
+            urls.append("")
+            continue
+        hyperlink = cells[2].find(".//w:hyperlink", NS)
+        relationship_id = hyperlink.attrib.get(f"{{{NS['r']}}}id") if hyperlink is not None else ""
+        urls.append(relationships.get(relationship_id, cell_text(cells[2])))
+    return urls
 
 
 def extract_thumbnails() -> list[str]:
@@ -145,13 +171,22 @@ def boolean_format(value: str):
     return value
 
 
-def build_datasets(tables: list[list[list[str]]], thumbnails: list[str], manifest: dict) -> list[dict]:
+def build_datasets(
+    tables: list[list[list[str]]], source_urls: list[str], thumbnails: list[str], manifest: dict
+) -> list[dict]:
     availability_rows = tables[0][1:]
     description_rows = tables[1][1:]
     descriptions = {
-        slugify(row[1]): {"description": row[1], "sourceUrl": row[2]}
-        for row in description_rows
-        if len(row) >= 3
+        slugify(availability_row[1]): {
+            "description": description_row[1],
+            "sourceUrl": source_urls[index]
+            if index < len(source_urls)
+            else description_row[2],
+        }
+        for index, (availability_row, description_row) in enumerate(
+            zip(availability_rows, description_rows)
+        )
+        if len(availability_row) >= 2 and len(description_row) >= 3
     }
 
     datasets = []
@@ -206,9 +241,10 @@ def build_datasets(tables: list[list[list[str]]], thumbnails: list[str], manifes
 def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     tables = read_docx_tables()
+    source_urls = read_docx_source_urls()
     thumbnails = extract_thumbnails()
     manifest = read_zip_manifest()
-    datasets = build_datasets(tables, thumbnails, manifest)
+    datasets = build_datasets(tables, source_urls, thumbnails, manifest)
 
     site_meta = {
         "title": "Physical Network Dataset",

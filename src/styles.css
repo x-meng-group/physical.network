@@ -448,6 +448,11 @@ tbody tr:hover {
   line-height: 1.6;
 }
 
+.credit-request {
+  margin-bottom: 0;
+  color: #d7dde0;
+}
+
 .release-actions {
   display: flex;
   flex-wrap: wrap;
@@ -475,6 +480,18 @@ button {
   border-color: rgba(30, 214, 195, 0.7);
   background: var(--teal);
   color: #05100f;
+}
+
+.site-footer {
+  padding: 24px 28px 34px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
 }
 
 .dataset-dialog {

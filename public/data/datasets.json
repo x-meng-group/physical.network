@@ -34,11 +34,11 @@
         "pixelVoxelImage": true,
         "treeGraph": true
       },
-      "description": "",
+      "description": "5 plants, scanned at 10+ times each",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://zenodo.org/record/5205562"
         }
       ],
       "zenodo": {
@@ -82,11 +82,11 @@
         "pixelVoxelImage": false,
         "treeGraph": true
       },
-      "description": "",
+      "description": "10 from Guyana, 10 Indonesia, and 9 from Peru",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "http://lucid.wur.nl/datasets/terrestrial-lidar-of-tropical-forests"
         }
       ],
       "zenodo": {
@@ -130,11 +130,11 @@
         "pixelVoxelImage": true,
         "treeGraph": true
       },
-      "description": "",
+      "description": "manually selected different species",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://3d.si.edu/corals"
         }
       ],
       "zenodo": {
@@ -178,11 +178,11 @@
         "pixelVoxelImage": true,
         "treeGraph": true
       },
-      "description": "",
+      "description": "Human, pulmonary",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://www.vascularmodel.com/index.html"
         }
       ],
       "zenodo": {
@@ -226,11 +226,11 @@
         "pixelVoxelImage": false,
         "treeGraph": false
       },
-      "description": "",
+      "description": "Fruit fly, brain, 3 random neurons",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://www.janelia.org/project-team/flyem/hemibrain"
         }
       ],
       "zenodo": {
@@ -274,11 +274,11 @@
         "pixelVoxelImage": false,
         "treeGraph": false
       },
-      "description": "",
+      "description": "Human, brain",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://h01-release.storage.googleapis.com/explore.html"
         }
       ],
       "zenodo": {
@@ -322,11 +322,11 @@
         "pixelVoxelImage": true,
         "treeGraph": true
       },
-      "description": "",
+      "description": "Power grids in Texas",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://www.entergy.com/view-outages/"
         }
       ],
       "zenodo": {
@@ -370,11 +370,11 @@
         "pixelVoxelImage": false,
         "treeGraph": false
       },
-      "description": "",
+      "description": "Fungal networks.",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://github.com/aguilart/Fungal_Networks"
         }
       ],
       "zenodo": {
@@ -418,11 +418,11 @@
         "pixelVoxelImage": false,
         "treeGraph": false
       },
-      "description": "",
+      "description": "Collection of all watercourses in the metropolitan France.",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "https://www.sandre.eaufrance.fr/atlas/srv/eng"
         }
       ],
       "zenodo": {
@@ -461,11 +461,11 @@
         "pixelVoxelImage": true,
         "treeGraph": false
       },
-      "description": "",
+      "description": "Physical layouts of transistors.",
       "sourceLinks": [
         {
           "label": "Original source",
-          "url": ""
+          "url": "http://www.vlsitechnology.org"
         }
       ],
       "zenodo": {
