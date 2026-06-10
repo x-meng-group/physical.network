@@ -1,0 +1,135 @@
+{
+  "archive": "swc.zip",
+  "archiveBytes": 806695308,
+  "archiveMB": 769.32,
+  "uncompressedBytes": 3439218642,
+  "uncompressedGB": 3.2,
+  "swcFileCount": 1059,
+  "folders": {
+    "arabidopsis": {
+      "fileCount": 52,
+      "totalBytes": 3852566,
+      "representativeFiles": [
+        "arabidopsis/plant1_03-17_AM_segmented_k=3.000_b={34, 11, -76}.swc",
+        "arabidopsis/plant1_03-17_PM_segmented_k=3.000_b={51, 54, -59}.swc",
+        "arabidopsis/plant1_03-18_AM_segmented_k=3.000_b={43, 40, -55}.swc",
+        "arabidopsis/plant1_03-18_PM_segmented_k=3.000_b={60, 43, -56}.swc",
+        "arabidopsis/plant1_03-19_AM_segmented_k=3.000_b={50, 61, -55}.swc",
+        "arabidopsis/plant1_03-19_PM_segmented_k=3.000_b={13, 19, -23}.swc"
+      ],
+      "totalMB": 3.67
+    },
+    "coral": {
+      "fileCount": 28,
+      "totalBytes": 7006845,
+      "representativeFiles": [
+        "coral/usnm_1027819-150k_k=6449.013_b={201, 183, 213}.swc",
+        "coral/usnm_1122540-150k_k=3719.200_b={201, 304, 146}.swc",
+        "coral/usnm_1122878-150k_k=6748.549_b={201, 236, 181}.swc",
+        "coral/usnm_1171477-150k_k=2935.694_b={201, 138, 172}.swc",
+        "coral/usnm_1246330-150k_k=7562.294_b={201, 261, 78}.swc",
+        "coral/usnm_148-150k_k=1405.659_b={201, 157, 121}.swc"
+      ],
+      "totalMB": 6.68
+    },
+    "fungal": {
+      "fileCount": 36,
+      "totalBytes": 25243871,
+      "representativeFiles": [
+        "fungal/C34(1)_t11-results.swc",
+        "fungal/C34(2)_t23-results.swc",
+        "fungal/C34(3)_t23-results.swc",
+        "fungal/C35(4)_t30-results.swc",
+        "fungal/C41(1)_t25_c-results.swc",
+        "fungal/C41(2)_t25_c-results.swc"
+      ],
+      "totalMB": 24.07
+    },
+    "integrated-circuit-pharosc": {
+      "fileCount": 478,
+      "totalBytes": 85368305,
+      "representativeFiles": [
+        "integrated-circuit-pharosc/vgalib013_adder4_k=12.500_b={10, 4, 10}.swc",
+        "integrated-circuit-pharosc/vgalib200_aoi21v0x1_k=1_b={16, 18, 10}.swc",
+        "integrated-circuit-pharosc/vgalib200_iv1v0x12_k=1_b={16, 18, 10}.swc",
+        "integrated-circuit-pharosc/vgalib200_iv1v0x2_k=1_b={16, 18, 10}.swc",
+        "integrated-circuit-pharosc/vgalib200_iv1v0x4_k=1_b={16, 18, 10}.swc",
+        "integrated-circuit-pharosc/vgalib200_iv1v0x6_k=1_b={16, 18, 10}.swc"
+      ],
+      "totalMB": 81.41
+    },
+    "neuron-fruit-fly-hemibrain": {
+      "fileCount": 71,
+      "totalBytes": 76570878,
+      "representativeFiles": [
+        "neuron-fruit-fly-hemibrain/1016835041.swc",
+        "neuron-fruit-fly-hemibrain/1048215779.swc",
+        "neuron-fruit-fly-hemibrain/1078693835.swc",
+        "neuron-fruit-fly-hemibrain/1139667240.swc",
+        "neuron-fruit-fly-hemibrain/1173814525.swc",
+        "neuron-fruit-fly-hemibrain/1234386037.swc"
+      ],
+      "totalMB": 73.02
+    },
+    "neuron-human-h01": {
+      "fileCount": 104,
+      "totalBytes": 941474563,
+      "representativeFiles": [
+        "neuron-human-h01/1072605926.swc",
+        "neuron-human-h01/1304599410.swc",
+        "neuron-human-h01/1465400601.swc",
+        "neuron-human-h01/1669770671.swc",
+        "neuron-human-h01/1684504313.swc",
+        "neuron-human-h01/1787105373.swc"
+      ],
+      "totalMB": 897.86
+    },
+    "power-grid-entergy": {
+      "fileCount": 229,
+      "totalBytes": 2145362793,
+      "representativeFiles": [
+        "power-grid-entergy/power-grid_k=1.000_b={0, -100000, 0}.swc",
+        "power-grid-entergy/power-grid_k=1.000_b={0, -120000, 0}.swc",
+        "power-grid-entergy/power-grid_k=1.000_b={0, -130000, 0}.swc",
+        "power-grid-entergy/power-grid_k=1.000_b={0, -140000, 0}.swc",
+        "power-grid-entergy/power-grid_k=1.000_b={0, -150000, 0}.swc",
+        "power-grid-entergy/power-grid_k=1.000_b={0, -70000, 0}.swc"
+      ],
+      "totalMB": 2045.98
+    },
+    "tropical-tree": {
+      "fileCount": 29,
+      "totalBytes": 5270878,
+      "representativeFiles": [
+        "tropical-tree/GUY01_k=1.000_b=0.000.swc",
+        "tropical-tree/GUY02_k=1.000_b=0.000.swc",
+        "tropical-tree/GUY03_k=1.000_b=0.000.swc",
+        "tropical-tree/GUY04_k=1.000_b=0.000.swc",
+        "tropical-tree/GUY05_k=1.000_b=0.000.swc",
+        "tropical-tree/GUY06_k=1.000_b=0.000.swc"
+      ],
+      "totalMB": 5.03
+    },
+    "vascular": {
+      "fileCount": 31,
+      "totalBytes": 5389858,
+      "representativeFiles": [
+        "vascular/0005_1001_k=23.983_b={251, 144, 491}.swc",
+        "vascular/0063_0001_k=24.008_b={99, 133, -42}.swc",
+        "vascular/0064_0001_k=24.020_b={109, 162, -149}.swc",
+        "vascular/0065_0001_k=23.981_b={132, -105, 355}.swc",
+        "vascular/0075_0001_k=24.005_b={153, 178, 5}.swc",
+        "vascular/0076_0001_k=24.002_b={155, 104, 100}.swc"
+      ],
+      "totalMB": 5.14
+    },
+    "watercourse-france": {
+      "fileCount": 1,
+      "totalBytes": 143678085,
+      "representativeFiles": [
+        "watercourse-france/MasseDEauRiviere_FXX.swc"
+      ],
+      "totalMB": 137.02
+    }
+  }
+}

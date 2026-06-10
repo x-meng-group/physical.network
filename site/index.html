@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Physical Network Dataset: skeletons, meshes, images, and graph representations for physical networks.">
+    <title>Physical Network Dataset</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="physical.network home">
+        <span class="brand-mark"></span>
+        <span>physical.network</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#catalog">Catalog</a>
+        <a href="#database">Database</a>
+        <a href="#release">Release</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="network-field">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div id="hero-thumbs" class="hero-thumbs" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Skeletons, meshes, images, and graph representations</p>
+          <h1 id="page-title">Physical Network Dataset</h1>
+          <p class="hero-lede">
+            A curated data registry for branching, transport, biological, infrastructural,
+            and engineered physical networks.
+          </p>
+          <div id="hero-stats" class="stats-grid" aria-label="Dataset summary"></div>
+        </div>
+      </section>
+
+      <section id="catalog" class="section catalog-section" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Collection browser</p>
+            <h2 id="catalog-title">Current Dataset Families</h2>
+          </div>
+          <p>The catalog is generated from the dataset metadata file and SWC archive manifest.</p>
+        </div>
+        <div id="dataset-grid" class="dataset-grid"></div>
+      </section>
+
+      <section id="database" class="section database-section" aria-labelledby="database-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Database view</p>
+            <h2 id="database-title">Search and Filter</h2>
+          </div>
+          <div class="controls" role="search">
+            <label>
+              <span>Search</span>
+              <input id="search" type="search" placeholder="Dataset, tag, format">
+            </label>
+            <label>
+              <span>Type</span>
+              <select id="type-filter">
+                <option value="all">All types</option>
+              </select>
+            </label>
+            <label>
+              <span>Format</span>
+              <select id="format-filter">
+                <option value="all">All formats</option>
+                <option value="skeletonSwc">SWC skeleton</option>
+                <option value="mesh">Mesh</option>
+                <option value="pixelVoxelImage">Pixel/voxel image</option>
+                <option value="treeGraph">Tree graph</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Dataset</th>
+                <th>Samples</th>
+                <th>SWC files</th>
+                <th>Source type</th>
+                <th>Formats</th>
+                <th>Archive folder</th>
+              </tr>
+            </thead>
+            <tbody id="dataset-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="release" class="section release-section" aria-labelledby="release-title">
+        <div class="release-panel">
+          <div>
+            <p class="eyebrow">Release</p>
+            <h2 id="release-title">Current Data Access</h2>
+            <p>
+              The local archive is available as <strong>swc.zip</strong>. The website is
+              already wired for a canonical Zenodo release and DOI when the record is updated.
+            </p>
+          </div>
+          <div class="release-actions">
+            <a class="button primary" href="../swc.zip">Download SWC ZIP</a>
+            <a class="button" href="https://zenodo.org/records/17154400" rel="noreferrer">Zenodo Record</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="dataset-dialog" class="dataset-dialog">
+      <button class="close-button" type="button" aria-label="Close detail panel">x</button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>

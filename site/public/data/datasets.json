@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "title": "Physical Network Dataset",
+    "domain": "physical.network",
+    "description": "A data registry for physical network skeletons, meshes, images, and graph representations.",
+    "updatedFrom": {
+      "readme": "readme.docx",
+      "archive": "swc.zip"
+    },
+    "release": {
+      "label": "Current local release",
+      "zenodoRecordUrl": "https://zenodo.org/records/17154400",
+      "doi": "",
+      "date": ""
+    },
+    "stats": {
+      "collections": 10,
+      "swcFiles": 1059,
+      "archiveMB": 769.32,
+      "uncompressedGB": 3.2
+    }
+  },
+  "datasets": [
+    {
+      "slug": "arabidopsis",
+      "name": "Arabidopsis",
+      "shortName": "arabidopsis",
+      "sampleCount": "52",
+      "swcFileCount": 52,
+      "originalDataType": "point cloud",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": true,
+        "treeGraph": true
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-01.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "arabidopsis",
+        "uncompressedMB": 3.67,
+        "representativeFiles": [
+          "arabidopsis/plant1_03-17_AM_segmented_k=3.000_b={34, 11, -76}.swc",
+          "arabidopsis/plant1_03-17_PM_segmented_k=3.000_b={51, 54, -59}.swc",
+          "arabidopsis/plant1_03-18_AM_segmented_k=3.000_b={43, 40, -55}.swc",
+          "arabidopsis/plant1_03-18_PM_segmented_k=3.000_b={60, 43, -56}.swc",
+          "arabidopsis/plant1_03-19_AM_segmented_k=3.000_b={50, 61, -55}.swc",
+          "arabidopsis/plant1_03-19_PM_segmented_k=3.000_b={13, 19, -23}.swc"
+        ]
+      },
+      "tags": [
+        "plant",
+        "growth",
+        "point cloud"
+      ]
+    },
+    {
+      "slug": "tropical-tree",
+      "name": "Tropical Tree",
+      "shortName": "tropical-tree",
+      "sampleCount": "29",
+      "swcFileCount": 29,
+      "originalDataType": "point cloud",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": false,
+        "treeGraph": true
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-02.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "tropical-tree",
+        "uncompressedMB": 5.03,
+        "representativeFiles": [
+          "tropical-tree/GUY01_k=1.000_b=0.000.swc",
+          "tropical-tree/GUY02_k=1.000_b=0.000.swc",
+          "tropical-tree/GUY03_k=1.000_b=0.000.swc",
+          "tropical-tree/GUY04_k=1.000_b=0.000.swc",
+          "tropical-tree/GUY05_k=1.000_b=0.000.swc",
+          "tropical-tree/GUY06_k=1.000_b=0.000.swc"
+        ]
+      },
+      "tags": [
+        "forest",
+        "lidar",
+        "tree"
+      ]
+    },
+    {
+      "slug": "coral",
+      "name": "Coral",
+      "shortName": "coral",
+      "sampleCount": "28",
+      "swcFileCount": 28,
+      "originalDataType": "mesh",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": true,
+        "treeGraph": true
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-03.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "coral",
+        "uncompressedMB": 6.68,
+        "representativeFiles": [
+          "coral/usnm_1027819-150k_k=6449.013_b={201, 183, 213}.swc",
+          "coral/usnm_1122540-150k_k=3719.200_b={201, 304, 146}.swc",
+          "coral/usnm_1122878-150k_k=6748.549_b={201, 236, 181}.swc",
+          "coral/usnm_1171477-150k_k=2935.694_b={201, 138, 172}.swc",
+          "coral/usnm_1246330-150k_k=7562.294_b={201, 261, 78}.swc",
+          "coral/usnm_148-150k_k=1405.659_b={201, 157, 121}.swc"
+        ]
+      },
+      "tags": [
+        "marine",
+        "mesh",
+        "branching"
+      ]
+    },
+    {
+      "slug": "vascular",
+      "name": "Vascular",
+      "shortName": "vascular",
+      "sampleCount": "31",
+      "swcFileCount": 31,
+      "originalDataType": "mesh",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": true,
+        "treeGraph": true
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-04.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "vascular",
+        "uncompressedMB": 5.14,
+        "representativeFiles": [
+          "vascular/0005_1001_k=23.983_b={251, 144, 491}.swc",
+          "vascular/0063_0001_k=24.008_b={99, 133, -42}.swc",
+          "vascular/0064_0001_k=24.020_b={109, 162, -149}.swc",
+          "vascular/0065_0001_k=23.981_b={132, -105, 355}.swc",
+          "vascular/0075_0001_k=24.005_b={153, 178, 5}.swc",
+          "vascular/0076_0001_k=24.002_b={155, 104, 100}.swc"
+        ]
+      },
+      "tags": [
+        "human",
+        "pulmonary",
+        "vasculature"
+      ]
+    },
+    {
+      "slug": "neuron-fruit-fly-hemibrain",
+      "name": "Fruit Fly Hemibrain Neurons",
+      "shortName": "neuron-fruit-fly-hemibrain",
+      "sampleCount": "71 (22,699)",
+      "swcFileCount": 71,
+      "originalDataType": "voxel image",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": false,
+        "treeGraph": false
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-05.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "neuron-fruit-fly-hemibrain",
+        "uncompressedMB": 73.02,
+        "representativeFiles": [
+          "neuron-fruit-fly-hemibrain/1016835041.swc",
+          "neuron-fruit-fly-hemibrain/1048215779.swc",
+          "neuron-fruit-fly-hemibrain/1078693835.swc",
+          "neuron-fruit-fly-hemibrain/1139667240.swc",
+          "neuron-fruit-fly-hemibrain/1173814525.swc",
+          "neuron-fruit-fly-hemibrain/1234386037.swc"
+        ]
+      },
+      "tags": [
+        "neuron",
+        "brain",
+        "connectomics"
+      ]
+    },
+    {
+      "slug": "neuron-human-h01",
+      "name": "Human H01 Neurons",
+      "shortName": "neuron-human-h01",
+      "sampleCount": "104 (46,378)",
+      "swcFileCount": 104,
+      "originalDataType": "voxel image",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": false,
+        "treeGraph": false
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-06.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "neuron-human-h01",
+        "uncompressedMB": 897.86,
+        "representativeFiles": [
+          "neuron-human-h01/1072605926.swc",
+          "neuron-human-h01/1304599410.swc",
+          "neuron-human-h01/1465400601.swc",
+          "neuron-human-h01/1669770671.swc",
+          "neuron-human-h01/1684504313.swc",
+          "neuron-human-h01/1787105373.swc"
+        ]
+      },
+      "tags": [
+        "neuron",
+        "brain",
+        "connectomics"
+      ]
+    },
+    {
+      "slug": "power-grid",
+      "name": "Power Grid",
+      "shortName": "power-grid",
+      "sampleCount": "229",
+      "swcFileCount": 229,
+      "originalDataType": "pixel image",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": "na",
+        "pixelVoxelImage": true,
+        "treeGraph": true
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-07.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "power-grid-entergy",
+        "uncompressedMB": 2045.98,
+        "representativeFiles": [
+          "power-grid-entergy/power-grid_k=1.000_b={0, -100000, 0}.swc",
+          "power-grid-entergy/power-grid_k=1.000_b={0, -120000, 0}.swc",
+          "power-grid-entergy/power-grid_k=1.000_b={0, -130000, 0}.swc",
+          "power-grid-entergy/power-grid_k=1.000_b={0, -140000, 0}.swc",
+          "power-grid-entergy/power-grid_k=1.000_b={0, -150000, 0}.swc",
+          "power-grid-entergy/power-grid_k=1.000_b={0, -70000, 0}.swc"
+        ]
+      },
+      "tags": [
+        "infrastructure",
+        "pixel image",
+        "graph"
+      ]
+    },
+    {
+      "slug": "fungal",
+      "name": "Fungal Networks",
+      "shortName": "fungal",
+      "sampleCount": "36",
+      "swcFileCount": 36,
+      "originalDataType": "skeleton",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": "na",
+        "pixelVoxelImage": false,
+        "treeGraph": false
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-08.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "fungal",
+        "uncompressedMB": 24.07,
+        "representativeFiles": [
+          "fungal/C34(1)_t11-results.swc",
+          "fungal/C34(2)_t23-results.swc",
+          "fungal/C34(3)_t23-results.swc",
+          "fungal/C35(4)_t30-results.swc",
+          "fungal/C41(1)_t25_c-results.swc",
+          "fungal/C41(2)_t25_c-results.swc"
+        ]
+      },
+      "tags": [
+        "mycelium",
+        "skeleton",
+        "growth"
+      ]
+    },
+    {
+      "slug": "watercourse-france",
+      "name": "Watercourse France",
+      "shortName": "watercourse-france",
+      "sampleCount": "1",
+      "swcFileCount": 1,
+      "originalDataType": "pixel image",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": "na",
+        "pixelVoxelImage": false,
+        "treeGraph": false
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-09.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "watercourse-france",
+        "uncompressedMB": 137.02,
+        "representativeFiles": [
+          "watercourse-france/MasseDEauRiviere_FXX.swc"
+        ]
+      },
+      "tags": [
+        "geospatial",
+        "river",
+        "hydrology"
+      ]
+    },
+    {
+      "slug": "integrated-circuit-pharosc",
+      "name": "Integrated Circuit Pharosc",
+      "shortName": "integrated-circuit-pharosc",
+      "sampleCount": "478",
+      "swcFileCount": 478,
+      "originalDataType": "voxel image",
+      "formats": {
+        "skeletonSwc": true,
+        "mesh": true,
+        "pixelVoxelImage": true,
+        "treeGraph": false
+      },
+      "description": "",
+      "sourceLinks": [
+        {
+          "label": "Original source",
+          "url": ""
+        }
+      ],
+      "zenodo": {
+        "recordUrl": "https://zenodo.org/records/17154400",
+        "doi": "",
+        "version": ""
+      },
+      "assets": {
+        "thumbnail": "assets/thumbnails/dataset-10.png",
+        "preview": ""
+      },
+      "archive": {
+        "zip": "swc.zip",
+        "folder": "integrated-circuit-pharosc",
+        "uncompressedMB": 81.41,
+        "representativeFiles": [
+          "integrated-circuit-pharosc/vgalib013_adder4_k=12.500_b={10, 4, 10}.swc",
+          "integrated-circuit-pharosc/vgalib200_aoi21v0x1_k=1_b={16, 18, 10}.swc",
+          "integrated-circuit-pharosc/vgalib200_iv1v0x12_k=1_b={16, 18, 10}.swc",
+          "integrated-circuit-pharosc/vgalib200_iv1v0x2_k=1_b={16, 18, 10}.swc",
+          "integrated-circuit-pharosc/vgalib200_iv1v0x4_k=1_b={16, 18, 10}.swc",
+          "integrated-circuit-pharosc/vgalib200_iv1v0x6_k=1_b={16, 18, 10}.swc"
+        ]
+      },
+      "tags": [
+        "chip",
+        "voxel image",
+        "layout"
+      ]
+    }
+  ]
+}
