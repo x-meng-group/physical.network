@@ -3,7 +3,9 @@
 ## Update workflow
 
 1. Replace the local, untracked `swc.zip` when the SWC archive changes.
+   The generator checks this repository root first, then the parent directory.
 2. Update the local, untracked `readme.docx` when dataset descriptions, thumbnails, or source links change.
+   The generator checks this repository root first, then the parent directory.
 3. Run:
 
    ```bash
@@ -28,8 +30,9 @@
 
 The website is generated from `public/data/datasets.json`. Dataset cards, filters,
 summary statistics, and detail panels are not hardcoded in the HTML. Future
-collections should be added to the local `readme.docx` and then regenerated, or added
-directly to the JSON if the DOCX is no longer the source of truth.
+collections should be added to the local or parent-directory `readme.docx` and then
+regenerated, or added directly to the JSON if the DOCX is no longer the source of
+truth.
 
 The current release metadata includes an empty DOI/version field. Fill those in
 after the Zenodo record is finalized.

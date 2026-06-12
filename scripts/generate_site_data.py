@@ -16,8 +16,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 DATA_DIR = PUBLIC / "data"
 THUMB_DIR = PUBLIC / "assets" / "thumbnails"
-README = ROOT / "readme.docx"
-SWC_ZIP = ROOT / "swc.zip"
+SOURCE_ROOTS = (ROOT, ROOT.parent)
+README_DOCX = "readme.docx"
+SWC_ARCHIVE = "swc.zip"
 
 NS = {
     "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
@@ -56,6 +57,21 @@ DATASET_TAGS = {
     "integrated-circuit-pharosc": ["chip", "voxel image", "layout"],
 }
 
+# Corrections for source DOCX values that are known to be stale.
+DESCRIPTION_OVERRIDES = {
+    "neuron-fruit-fly-hemibrain": "Fruit fly, brain, 71 neurons",
+}
+
+
+def source_path(filename: str) -> Path:
+    candidates = [directory / filename for directory in SOURCE_ROOTS]
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+
+    checked = "\n  - ".join(str(candidate) for candidate in candidates)
+    raise FileNotFoundError(f"Could not find {filename}. Checked:\n  - {checked}")
+
 
 def slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
@@ -66,7 +82,7 @@ def cell_text(cell: ET.Element) -> str:
 
 
 def read_docx_tables() -> list[list[list[str]]]:
-    with ZipFile(README) as zf:
+    with ZipFile(source_path(README_DOCX)) as zf:
         root = ET.fromstring(zf.read("word/document.xml"))
 
     tables: list[list[list[str]]] = []
@@ -79,7 +95,7 @@ def read_docx_tables() -> list[list[list[str]]]:
 
 
 def read_docx_source_urls() -> list[str]:
-    with ZipFile(README) as zf:
+    with ZipFile(source_path(README_DOCX)) as zf:
         root = ET.fromstring(zf.read("word/document.xml"))
         rel_root = ET.fromstring(zf.read("word/_rels/document.xml.rels"))
 
@@ -109,7 +125,7 @@ def extract_thumbnails() -> list[str]:
         existing.unlink()
 
     image_paths: list[str] = []
-    with ZipFile(README) as zf:
+    with ZipFile(source_path(README_DOCX)) as zf:
         media = sorted(
             [p for p in zf.namelist() if p.startswith("word/media/image")],
             key=lambda p: int(re.search(r"image(\d+)", p).group(1)),
@@ -123,13 +139,14 @@ def extract_thumbnails() -> list[str]:
 
 
 def read_zip_manifest() -> dict:
+    swc_zip = source_path(SWC_ARCHIVE)
     groups: dict[str, dict] = defaultdict(
         lambda: {"fileCount": 0, "totalBytes": 0, "representativeFiles": []}
     )
     total_files = 0
     total_bytes = 0
 
-    with ZipFile(SWC_ZIP) as zf:
+    with ZipFile(swc_zip) as zf:
         for info in zf.infolist():
             if info.is_dir() or not info.filename.lower().endswith(".swc"):
                 continue
@@ -150,9 +167,9 @@ def read_zip_manifest() -> dict:
         for name, values in sorted(groups.items())
     }
     return {
-        "archive": "swc.zip",
-        "archiveBytes": SWC_ZIP.stat().st_size,
-        "archiveMB": round(SWC_ZIP.stat().st_size / 1024 / 1024, 2),
+        "archive": SWC_ARCHIVE,
+        "archiveBytes": swc_zip.stat().st_size,
+        "archiveMB": round(swc_zip.stat().st_size / 1024 / 1024, 2),
         "uncompressedBytes": total_bytes,
         "uncompressedGB": round(total_bytes / 1024 / 1024 / 1024, 2),
         "swcFileCount": total_files,
@@ -198,6 +215,7 @@ def build_datasets(
         folder_stats = manifest["folders"].get(archive_folder, {})
         desc = descriptions.get(slug, {})
         sample_text = row[2].replace("(", " (")
+        description = DESCRIPTION_OVERRIDES.get(slug, desc.get("description", ""))
 
         datasets.append(
             {
@@ -213,7 +231,7 @@ def build_datasets(
                     "pixelVoxelImage": boolean_format(row[6]),
                     "treeGraph": boolean_format(row[7]),
                 },
-                "description": desc.get("description", ""),
+                "description": description,
                 "sourceLinks": [
                     {"label": "Original source", "url": desc.get("sourceUrl", "")}
                 ],
@@ -227,7 +245,7 @@ def build_datasets(
                     "preview": "",
                 },
                 "archive": {
-                    "zip": "swc.zip",
+                    "zip": SWC_ARCHIVE,
                     "folder": archive_folder,
                     "uncompressedMB": folder_stats.get("totalMB"),
                     "representativeFiles": folder_stats.get("representativeFiles", []),
@@ -251,8 +269,8 @@ def main() -> None:
         "domain": "physical.network",
         "description": "A data registry for physical network skeletons, meshes, images, and graph representations.",
         "updatedFrom": {
-            "readme": "readme.docx",
-            "archive": "swc.zip",
+            "readme": README_DOCX,
+            "archive": SWC_ARCHIVE,
         },
         "release": {
             "label": "Current local release",
